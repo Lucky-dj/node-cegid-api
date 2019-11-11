@@ -1,1 +1,1 @@
-# egg-cegid-sdk
+# node-cegid-sdk
