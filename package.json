@@ -1,8 +1,8 @@
 {
-  "name": "egg-cegid-api",
+  "name": "node-cegid-api-test",
   "version": "0.0.1",
   "description": "cegid pos docking.",
-  "main": "app.js",
+  "main": "index.js",
   "directories": {
     "lib": "lib",
     "test": "test"
@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Lucky-dj/egg-cegid-sdk.git"
+    "url": "git+https://github.com/Lucky-dj/node-cegid-api.git"
   },
   "author": "rookieover",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Lucky-dj/egg-cegid-sdk/issues"
+    "url": "https://github.com/Lucky-dj/node-cegid-api/issues"
   },
-  "homepage": "https://github.com/Lucky-dj/egg-cegid-sdk#readme",
+  "homepage": "https://github.com/Lucky-dj/node-cegid-api#readme",
   "dependencies": {
     "crypto": "^1.0.1",
     "easy-soap-request": "^3.2.0",

@@ -21,20 +21,25 @@ describe('test/cegid_customer.test.js', () => {
 
     it('should create Customer', async () => {
         const params = {
-            // 'ns:ActivitySectorCode': '', // 客户活动部门的代码
+            'ns:ActivitySectorCode': 'CN0020000003', // 客户活动部门的代码
             'ns:AddressData': {
-                'ns:City': '深圳', // 城市 *
-                'ns:RegionId': '518000', // 区域ID *
+                'ns:City': '广东', // 城市 *
+                'ns:RegionId': 'C06', // 区域ID *
+                'ns:CountryId': '',
             },
             'ns:FirstName': 'dajun', // 名字 *
             'ns:LastName': 'xiao', // 姓氏 *
             'ns:EmailData': {
                 'ns:Email': 'xiaodajun@yeezon.com', // 邮箱 *
             },
+            'ns:TitleId': '先生', // 客户头部
+            'ns:PhoneData': {
+                'ns:CellularPhoneNumber': '181299486662',
+            },
+            'ns:CustomerId': 'CN0020000005',
             // 'ns:AlternateFirstName': '', // 显著特征
             // 'ns:AlternateLastName': '', // 昵称
             // 'ns:IsCompany': true, // 公司
-            // 'ns:TitleId': '', // 客户头部
             // 'ns:UserDefinedBooleans': {
             //     'ns:UserDefinedBoolean': {
             //         'ns:Id': 1,
@@ -51,5 +56,13 @@ describe('test/cegid_customer.test.js', () => {
         };
         const result = await cegidCustomer.create(params);
         console.log(result)
+    });
+
+    it('should search customer', async () => {
+        const params = {
+          'ns:CreationStoreId': 'test',
+        };
+        const result = await cegidCustomer.search(params);
+        console.log('result', result);
     });
 });
