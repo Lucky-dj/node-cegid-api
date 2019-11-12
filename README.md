@@ -33,17 +33,17 @@ customer.helloworld(text);
 
 因本人对接cegid只包含 CustomerWcfService 和 ItemInventoryWcfService 所以目前API只包含此2大类，以下为接口对接情况
 
--[x] Web Service: ItemInventoryWcfService
-    -[x] AddNewCustomer
-    -[x] GetCustomerDetail
-    -[x] GetCustomerIdByReference
-    -[x] SearchCustomerIds
-    -[x] UpdateCustomer
+- [x] Web Service: ItemInventoryWcfService
+    - [x] AddNewCustomer
+    - [x] GetCustomerDetail
+    - [x] GetCustomerIdByReference
+    - [x] SearchCustomerIds
+    - [x] UpdateCustomer
 
--[ ] Web Service: ItemInventoryWcfService
-    -[ ] GetAvailableCumulativeQtyAllStores
-    -[ ] GetAvailableQty
-    -[ ] GetInventoryDetailByStore
-    -[ ] GetListItemInventoryDetailByStore
-    -[ ] ResetShoppingCart
-    -[ ] UpdateShoppingCart
+- [ ] Web Service: ItemInventoryWcfService
+    - [ ] GetAvailableCumulativeQtyAllStores
+    - [ ] GetAvailableQty
+    - [ ] GetInventoryDetailByStore
+    - [ ] GetListItemInventoryDetailByStore
+    - [ ] ResetShoppingCart
+    - [ ] UpdateShoppingCart
