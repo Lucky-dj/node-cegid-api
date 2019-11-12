@@ -1,5 +1,5 @@
 {
-  "name": "node-cegid-api-test",
+  "name": "node-cegid-api",
   "version": "0.0.1",
   "description": "cegid pos docking.",
   "main": "index.js",
