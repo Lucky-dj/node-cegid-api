@@ -21,11 +21,10 @@ describe('test/cegid_customer.test.js', () => {
 
     it('should create Customer', async () => {
         const params = {
-            'ns:ActivitySectorCode': 'CN0020000003', // 客户活动部门的代码
             'ns:AddressData': {
                 'ns:City': '广东', // 城市 *
+                'ns:CountryId': 'CHN',
                 'ns:RegionId': 'C06', // 区域ID *
-                'ns:CountryId': '',
             },
             'ns:FirstName': 'dajun', // 名字 *
             'ns:LastName': 'xiao', // 姓氏 *
@@ -36,7 +35,7 @@ describe('test/cegid_customer.test.js', () => {
             'ns:PhoneData': {
                 'ns:CellularPhoneNumber': '181299486662',
             },
-            'ns:CustomerId': 'CN0020000005',
+            'ns:IsCompany': false,
             // 'ns:AlternateFirstName': '', // 显著特征
             // 'ns:AlternateLastName': '', // 昵称
             // 'ns:IsCompany': true, // 公司
@@ -60,9 +59,47 @@ describe('test/cegid_customer.test.js', () => {
 
     it('should search customer', async () => {
         const params = {
-          'ns:CreationStoreId': 'test',
+            // 'ns:AddressData': {
+            //     'ns:City': '广东', // 城市 *
+            //     'ns:CountryId': 'CHN',
+            //     'ns:RegionId': 'C06', // 区域ID *
+            // },
+            // 'ns:FirstName': 'dajun', // 名字 *
+            // 'ns:LastName': 'xiao', // 姓氏 *
+            // 'ns:EmailData': {
+            //     'ns:Email': 'xiaodajun@yeezon.com', // 邮箱 *
+            // },
+            'ns:TitleId': '先生', // 客户头部
+            'ns:PhoneData': {
+                'ns:CellularPhoneNumber': '181299486662',
+            },
+            // 'ns:IsCompany': false,
         };
         const result = await cegidCustomer.search(params);
+        console.log('result', result);
+    });
+
+    it('should reference customer', async () => {
+        const params = {
+            'ns:CellularPhoneNumber': '18129948662'
+        };
+        const result = await cegidCustomer.findByReference(params);
+        console.log('result', result);
+    });
+
+    it('should update customer', async () => {
+        const params = {
+            'ns:UserDefinedTexts': {
+                'ns:UserDefinedText': {
+                    'ns:Id': 1,
+                    'ns:Value': '1000100',
+                },
+            },
+            // 'ns:EmailData': {
+            //     'ns:Email': 'xiaodajun@yeezon.com', // 邮箱 *
+            // }
+        };
+        const result = await cegidCustomer.update('CNE030000012', params);
         console.log('result', result);
     });
 });
