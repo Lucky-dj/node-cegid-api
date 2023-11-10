@@ -22,7 +22,7 @@
   "homepage": "https://github.com/Lucky-dj/node-cegid-api#readme",
   "dependencies": {
     "crypto": "^1.0.1",
-    "easy-soap-request": "^3.2.0",
+    "easy-soap-request": "^5.4.0",
     "mocha": "^6.2.2",
     "moment": "^2.24.0",
     "node-fetch": "^2.6.0",
